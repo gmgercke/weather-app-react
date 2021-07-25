@@ -87,7 +87,9 @@ export default function Weather() {
             onChange={submitCity}
           />
           <input className="search-button" type="submit" value="Search" />
-          <button id="current-loc">Current Location</button>
+          <button id="current-loc" onClick={getLocation}>
+            Current Location
+          </button>
         </form>
       </div>
     );
