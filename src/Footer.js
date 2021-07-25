@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <span className="Footer">
       <a
-        href="https://github.com/gmgercke/react-weather-app"
+        href="https://github.com/gmgercke/weather-app-react"
         target="_blank"
         rel="noreferrer"
       >
