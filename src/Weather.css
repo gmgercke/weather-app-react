@@ -1,0 +1,39 @@
+.Weather {
+  text-transform: capitalize;
+}
+
+.search-field {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  padding: 0 30px 0 5px;
+}
+
+.search-button {
+  color: rgb(34, 34, 34);
+  background: #c7dfff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 5px;
+}
+
+#current-loc {
+  color: rgb(34, 34, 34);
+  background: #c7dfff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 5px;
+}
+
+.temperature {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.Attributes {
+  font-size: 16px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+}
