@@ -3,14 +3,13 @@ import DateTime from "./DateTime";
 import axios from "axios";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [city, setCity] = useState("");
-  const [weather, setWeather] = useState({});
-  const [active, setActive] = useState(false);
+  const [weather, setWeather] = useState({ active: false });
 
   function showWeather(response) {
-    setActive(true);
     setWeather({
+      active: true,
       city: response.data.name,
       temp: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
@@ -43,51 +42,60 @@ export default function Weather() {
     navigator.geolocation.getCurrentPosition(locationSearch);
   }
 
-  if (active) {
+  if (weather.active) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <input
             className="search-field"
+            autoFocus="on"
             type="search"
             placeholder="Search for a city..."
             onChange={submitCity}
           />
           <input className="search-button" type="submit" value="Search" />
-          <button id="current-loc" onClick={getLocation}>
+          <button className="current-loc" onClick={getLocation}>
             Current Location
           </button>
         </form>
         <div className="Weather">
           <h1>
-            <strong>{weather.city}</strong> <DateTime />
+            <strong>{weather.city}</strong>
           </h1>
-          <p>{weather.description}</p>
+          <DateTime />
+          <p className="description">{weather.description}</p>
           <div className="row">
             <div className="col-3">
               <img src={weather.icon} alt={weather.description} id="icon" />
             </div>
-            <div className="col temperature">{weather.temp} °C</div>
-            <div className="col Attributes">
-              Humidity: {weather.humidity} %<br />
-              Wind: {weather.wind} km/h
+            <div className="col temperature">
+              {weather.temp} <span className="unit">°C</span>
+            </div>
+            <div className="col-6 Attributes" my-auto="true">
+              <ul>
+                <li>Humidity: {weather.humidity} %</li>
+                <li>Wind: {weather.wind} km/h</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     );
   } else {
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&units=metric&appid=38056c1bbe50ac4df0a26ff8642db7e0`;
+    axios.get(apiUrl).then(showWeather);
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <input
             className="search-field"
+            autoFocus="on"
             type="search"
             placeholder="Search for a city..."
             onChange={submitCity}
           />
           <input className="search-button" type="submit" value="Search" />
-          <button id="current-loc" onClick={getLocation}>
+          <button className="current-loc" onClick={getLocation}>
             Current Location
           </button>
         </form>

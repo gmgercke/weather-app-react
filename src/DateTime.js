@@ -27,7 +27,7 @@ export default function DateTime() {
   const formattedDate = `${weekDay}., ${month} ${date}, ${year}`;
 
   const currentTime = new Date();
-  const hours = currentTime.getHours();
+  const hours = ("0" + currentTime.getHours()).slice(-2);
   const minutes = ("0" + currentTime.getMinutes()).slice(-2);
 
   const formattedTime = `(${hours}:${minutes})`;
