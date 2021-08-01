@@ -26,39 +26,3 @@
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.25);
   margin-left: 5px;
 }
-
-h1 {
-  margin-top: 5px;
-  margin-bottom: 0;
-}
-
-.description {
-  font-size: 16px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-  opacity: 0.75;
-}
-
-.temperature {
-  line-height: 100px;
-  font-weight: bold;
-  font-size: 36px;
-}
-
-.unit {
-  line-height: 1;
-  font-size: 16px;
-  position: relative;
-  top: -19px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.Attributes {
-  font-size: 16px;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-  opacity: 0.75;
-  position: relative;
-  top: 20px;
-}

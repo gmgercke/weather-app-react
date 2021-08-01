@@ -1,0 +1,47 @@
+h1 {
+  font-size: 34px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  margin: 0 auto;
+  font-size: 14px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+}
+
+.temperature {
+  line-height: 100px;
+  font-weight: bold;
+  font-size: 52px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.unit {
+  padding-left: 3px;
+  line-height: 1;
+  font-size: 14px;
+  position: relative;
+  top: -28px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.Attributes {
+  text-transform: none;
+  font-size: 14px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  opacity: 0.75;
+  position: relative;
+  top: 15px;
+}
+
+canvas {
+  position: relative;
+  top: 25%;
+}
