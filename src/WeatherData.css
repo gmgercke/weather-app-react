@@ -30,6 +30,8 @@ h1 {
 
 ul {
   list-style-type: none;
+  position: relative;
+  top: 15px;
 }
 
 .Attributes {
@@ -37,11 +39,14 @@ ul {
   font-size: 14px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   opacity: 0.75;
-  position: relative;
-  top: 15px;
 }
 
 canvas {
   position: relative;
   top: 25%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(43, 122, 226);
 }
