@@ -29,9 +29,10 @@ h1 {
 }
 
 ul {
+  padding: 0;
   list-style-type: none;
   position: relative;
-  top: 15px;
+  top: 17px;
 }
 
 .Attributes {

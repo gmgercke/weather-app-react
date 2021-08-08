@@ -3,7 +3,15 @@ import "./DateTime.css";
 
 export default function DateTime() {
   const currentDate = new Date();
-  const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   const months = [
     "Jan",
     "Feb",
@@ -19,12 +27,26 @@ export default function DateTime() {
     "Dec",
   ];
 
+  const nth = function (d) {
+    if (d > 3 && d < 21) return "th";
+    switch (d % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+
   const year = currentDate.getFullYear();
-  const date = ("0" + currentDate.getDate()).slice(-2);
+  const date = currentDate.getDate();
   const weekDay = weekDays[currentDate.getDay()];
   const month = months[currentDate.getMonth()];
 
-  const formattedDate = `${weekDay}., ${month} ${date}, ${year}`;
+  const formattedDate = `${weekDay}, ${month} ${date}${nth(date)}, ${year}`;
 
   const currentTime = new Date();
   const hours = ("0" + currentTime.getHours()).slice(-2);
