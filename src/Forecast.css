@@ -1,3 +1,13 @@
-hr {
-  margin: 0 auto;
+.Forecast {
+  text-align: center;
+  font-size: 14px;
+}
+
+.forecast-day {
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
+.forecast-temp-max {
+  font-weight: bold;
 }

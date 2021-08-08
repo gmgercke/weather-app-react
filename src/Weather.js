@@ -12,6 +12,7 @@ export default function Weather(props) {
     setWeather({
       active: true,
       city: response.data.name,
+      coords: response.data.coord,
       temp: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       wind: Math.round(response.data.wind.speed * 3.6),
@@ -22,13 +23,13 @@ export default function Weather(props) {
   }
 
   function defaultSearch() {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=38056c1bbe50ac4df0a26ff8642db7e0`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=160bba92ebce94c5acec84fa85c7fec9`;
     axios.get(apiUrl).then(showWeather);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=38056c1bbe50ac4df0a26ff8642db7e0`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=160bba92ebce94c5acec84fa85c7fec9`;
     axios.get(apiUrl).then(showWeather);
   }
 
@@ -39,7 +40,7 @@ export default function Weather(props) {
   function locationSearch(position) {
     const lati = position.coords.latitude;
     const longi = position.coords.longitude;
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=38056c1bbe50ac4df0a26ff8642db7e0&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=160bba92ebce94c5acec84fa85c7fec9&units=metric`;
 
     axios.get(apiUrl).then(showWeather);
   }
@@ -66,7 +67,8 @@ export default function Weather(props) {
           </button>
         </form>
         <WeatherData data={weather} />
-        <Forecast />{" "}
+        <hr />
+        <Forecast coordinates={weather.coords} />{" "}
       </div>
     );
   } else {

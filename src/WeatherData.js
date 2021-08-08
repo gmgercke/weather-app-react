@@ -13,8 +13,8 @@ export default function WeatherData(props) {
       <DateTime />
       <p className="description">{props.data.description}</p>
       <div className="row">
-        <div className="col-2">
-          <WeatherIcons code={props.data.icon} />
+        <div className="col-2 d-flex align-items-center">
+          <WeatherIcons code={props.data.icon} size={62} />
         </div>
         <div className="col temperature">
           <Temperature celsius={props.data.temp} />

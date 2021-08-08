@@ -41,11 +41,6 @@ ul {
   opacity: 0.75;
 }
 
-canvas {
-  position: relative;
-  top: 25%;
-}
-
 a {
   text-decoration: none;
   color: rgb(43, 122, 226);
