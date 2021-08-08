@@ -23,7 +23,7 @@ export default function Forecast(props) {
   } else {
     const longitude = props.coordinates.lon;
     const latitude = props.coordinates.lat;
-    const forecastApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=160bba92ebce94c5acec84fa85c7fec9&units=metric`;
+    const forecastApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=5db7555ef9aa7017e515b969f4711fd7&units=metric`;
 
     axios.get(forecastApiUrl).then(displayForecast);
     return null;

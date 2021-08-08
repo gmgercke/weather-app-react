@@ -23,13 +23,13 @@ export default function Weather(props) {
   }
 
   function defaultSearch() {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=160bba92ebce94c5acec84fa85c7fec9`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5db7555ef9aa7017e515b969f4711fd7`;
     axios.get(apiUrl).then(showWeather);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=160bba92ebce94c5acec84fa85c7fec9`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5db7555ef9aa7017e515b969f4711fd7`;
     axios.get(apiUrl).then(showWeather);
   }
 
@@ -40,7 +40,7 @@ export default function Weather(props) {
   function locationSearch(position) {
     const lati = position.coords.latitude;
     const longi = position.coords.longitude;
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=160bba92ebce94c5acec84fa85c7fec9&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lati}&lon=${longi}&appid=5db7555ef9aa7017e515b969f4711fd7&units=metric`;
 
     axios.get(apiUrl).then(showWeather);
   }
