@@ -19,8 +19,8 @@ export default function WeatherIcons(props) {
     "11n": "SLEET",
     "13d": "SNOW",
     "13n": "SNOW",
-    "15d": "FOG",
-    "15n": "FOG",
+    "50d": "FOG",
+    "50n": "FOG",
   };
 
   return (

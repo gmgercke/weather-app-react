@@ -46,7 +46,7 @@ export default function DateTime() {
   const weekDay = weekDays[currentDate.getDay()];
   const month = months[currentDate.getMonth()];
 
-  const formattedDate = `${weekDay}, ${month} ${date}${nth(date)}, ${year}`;
+  const formattedDate = `${weekDay}, ${month} ${date}${nth(date)} ${year}`;
 
   const currentTime = new Date();
   const hours = ("0" + currentTime.getHours()).slice(-2);
